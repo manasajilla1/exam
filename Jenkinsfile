@@ -10,7 +10,7 @@ pipeline{
         // }
         stage("build Image"){
             steps{
-                bat 'docker build -t myselenium:v1'
+                bat 'docker build -t myselenium:v1 .'
             }
         }
         stage('Docker login'){
