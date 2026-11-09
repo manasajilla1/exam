@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Docker login'){
             steps{
-                bat 'docker login -u manasajilla -p 11@Manasa'
+                bat 'docker login -u manasajilla -p 11@manasa'
             }
         }
         stage('push into the docker hub'){
