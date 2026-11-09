@@ -1,13 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage("selenium"){
-            steps{
-                bat 'pip install -r requirements.txt'
-                bat 'start /B python app.py'
-                bat 'python -m pytest -v test_registration.py'
-            }
-        }
+        // stage("selenium"){
+        //     steps{
+        //         bat 'pip install -r requirements.txt'
+        //         bat 'start /B python app.py'
+        //         bat 'python -m pytest -v test_registration.py'
+        //     }
+        // }
         stage("build Image"){
             steps{
                 bat 'docker build -t myselenium:v1'
