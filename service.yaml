@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: seleappdemo-service
+spec:
+  selector:
+      app: seleappdemo
+  templates:
+    -protocal: TCP
+    port: 5000
+    targetPort: 5000
+    nodePort: 5000
+  type: NodePort

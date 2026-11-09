@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seleappdemo-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: seleappdemo
+  templates:
+    metadata:
+      labels:
+        app: seleappdemo
+    spec:
+      containers:
+        -name: seleappdemo
+        images: manasajilla/simple-demo:seleimage1
+        port:
+          -containerport: 5000
